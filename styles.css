@@ -28,6 +28,7 @@
   /* Set height of body and the document to 100% to enable "full page tabs" */
 body, html {
     height: 100%;
+    width: 100%;
     margin: 0;
     font-family: Arial;
   }
@@ -55,6 +56,7 @@ body, html {
     display: none;
     padding: 100px 20px;
     height: 100%;
+    width: 100%;
   }
   
   #COE {background-color: red;}
