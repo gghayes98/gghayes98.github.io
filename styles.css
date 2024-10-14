@@ -58,41 +58,40 @@ body, html {
     width: 100%;
   }
 
-   /* Split the screen in half */
-.split {
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  grid-template-columns: auto auto auto;
 }
 
-/* Control the left side */
-.left {
-  left: 0;
-}
+  .top {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+  }
 
-/* Control the right side */
-.right {
-  right: 0;
-}
+  .split {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
 
-/* If you want the content centered horizontally and vertically */
-.centered {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+  /* Control the left side */
+  .left {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  /* Control the right side */
+  .right {
+    grid-row: 2;
+    grid-column: 2;
+  }
 
 /* Style the image inside the centered container, if needed */
 .centered img {
   width: 150px;
-  border-radius: 50%;
-} 
+}
   
-  #COE {background-color: red;}
-  #NoteTaker {background-color: green;}
-  #Derelict {background-color: blue;}
+#COE {background-color: red;}
+#NoteTaker {background-color: green;}
+#Derelict {background-color: blue;}
