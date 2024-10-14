@@ -2,9 +2,14 @@
 <html lang="en">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    a:link {
+      color: skyblue
+    }
+  </style>
   <script src="l-projects.js"></script>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Gabriel Hayes - Game Dev</title>
+  <title>Gabriel Hayes - Portfolio</title>
 
   <div class="topnav">
     <a href="./index.html">Home</a>
@@ -13,9 +18,9 @@
     <a href="./s-projects.html">Small Projects</a>
   </div>
 
-    <button class="tablink" onclick="openPage('COE', this, 'red')" id="defaultOpen">COE Mods</button>
-    <button class="tablink" onclick="openPage('NoteTaker', this, 'green')">Note Taker</button>
-    <button class="tablink" onclick="openPage('Derelict', this, 'blue')">Derelict</button>
+    <button class="tablink" onclick="openPage('COE', this, '#FCF5E5')" id="defaultOpen">COE Mods</button>
+    <button class="tablink" onclick="openPage('NoteTaker', this, '#FCF5E5')">Note Taker</button>
+    <button class="tablink" onclick="openPage('Derelict', this, '#FCF5E5')">Derelict</button>
     
     <div id="COE" class="tabcontent">
       <div class="grid-container">
@@ -40,8 +45,12 @@
                   to gain greater powers and access to monstrous creatures such as the Nemean Lion, Medusa, and the Mares of Diomedes. Additionally it adds various monsters and gods roaming Elysium of which to beware or utilize.
                 </p>
                 <p>
-                  This is clearly the more popular of the two mods I have been a part of producing which I believe due to being just a better fit for the overall theme of the game. As of now (10/14/24) the mod has nearly 2,000 views and nearly 1,000 subscriptions.
-                  With a game that averages roughly 100-200 players on average on a good week, this is one of the more popular mods for the game, landing itself on the second page of steam's most popular category.
+                  This is clearly the more popular of the two mods I have been a part of producing which I believe due to being just a better fit for the overall theme of the game. As of now (10/14/24) the mod has 1,760 views and 722 subscriptions.
+                  With a game that averages roughly 75-150 players on a good week, this is one of the more popular mods for the game, landing itself on the second page of steam's most popular category.
+                </p>
+                <img src="Images\spartan_kings_new_stuff.jpg" alt="Mod Outline" style="border-radius: 0%; width: 500px;">
+                <p>
+                  Seen above is an outline of the whole mod. It shows each new character, item, and terrain that we made with all the code for each of them available <a href="https://github.com/gghayes98/SpartanKings">here</a>.
                 </p>
                 <p>
                   This mod is a great showcase for making history engaging as well as working around constraints. The biggest example would be for the Trojan Horse. If you choose to worship Athena, she gives you access to the Trojan Horse of mythology.
@@ -59,11 +68,15 @@
                   This mod adds the custom Desperado class, a class based on the Wild West and its mythology. Not as popular as the Spartan Kings mod, this mod is based on the oft romanticised Wild West. It includes
                   not only cowboys, but also real famous figures such as Calamity Jane and Annie Oakley, western myths like Buffalo Bill and Paul Bunyan, and some new legends made just for this mod. This mod was much more ambitious than the Spartan Kings mod
                   as it was meant to allow players to build up towns with various buildings surrounding a saloon that each gave different bonuses to the player. Additionally, the player will eventually get a large, armored train that roams the map, but the player needs to 
-                  build infrastructure to allow it to travel freely.
+                  build infrastructure beforehand.
                 </p>
                 <p>
                   Again, this mod was not as popular as the Spartan Kings mod, but certainly found a place amongst the other mods for the game. I believe it's lack of popularity is mostly due to how grounded it feels. In a game with monsters, gates to Hell, and a biblical rapture,
-                  cowboys can feel a less intersting pick. As of now (10/14/24) the mod has nearly 1000 visitors with a little under 300 subscriptions.
+                  cowboys can feel a less intersting pick. As of now (10/14/24) the mod has 863 visitors with 258 subscriptions.
+                </p>
+                <img src="Images\desperado_new_stuff.jpg" alt="Mod Outline" style="border-radius: 0%; width: 500px;">
+                <p>
+                  Seen above is an outline of the whole mod. It shows each new character, item, and terrain that we made with all the code for each of them available <a href="https://github.com/gghayes98/Desperado">here</a>.
                 </p>
               </div>
             </div>
@@ -72,12 +85,43 @@
     </div>
     
     <div id="NoteTaker" class="tabcontent">
+      <div class="top">
         <h3>Note Taker</h3>
         <p>Content goes here</p>
+      </div>
     </div>
     
     <div id="Derelict" class="tabcontent">
-        <h3>Derelict</h3>
-        <p>Content goes here</p>
+        <div class="top">
+          <h3>Derelict</h3>
+          <p>Content goes here</p>
+        </div>
     </div>
+
+    <script>
+    function openPage(pageName, elmnt, color) {
+      // Hide all elements with class="tabcontent" by default */
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+    
+      // Remove the background color of all tablinks/buttons
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+    
+      // Show the specific tab content
+      document.getElementById(pageName).style.display = "block";
+    
+      // Add the specific color to the button used to open the tab content
+      elmnt.style.backgroundColor = color;
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+
 </html>
