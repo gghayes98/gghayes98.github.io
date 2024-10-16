@@ -106,6 +106,12 @@ body, html {
   width: 150px;
   border-radius: 50%;
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1;
+}
   
 #COE {background-color: #FCF5E5;}
 #NoteTaker {background-color: #FCF5E5;}
