@@ -7,15 +7,13 @@
       color: skyblue
     }
   </style>
-  <script src="l-projects.js"></script>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Gabriel Hayes - Portfolio</title>
 
   <div class="topnav">
     <a href="./index.html">Home</a>
     <a href="./about-me.html">About Me</a>
-    <a class="active" href="./l-projects.html">Large Projects</a>
-    <a href="./s-projects.html">Small Projects</a>
+    <a class="active" href="./projects.html">Projects</a>
   </div>
 
     <button class="tablink" onclick="openPage('COE', this, '#FCF5E5')" id="defaultOpen">COE Mods</button>
@@ -86,8 +84,36 @@
     
     <div id="NoteTaker" class="tabcontent">
       <div class="top">
-        <h3>Note Taker</h3>
-        <p>Content goes here</p>
+        <h3><a href="https://github.com/cosmo4/CSE-310-Team6">Note Taker</a></h3>
+        <p>
+          Created by a small group of five attempting to delve into something new and make something useful, I was involved in the creation of a note taking app that utilized AI to summarize
+          long notes and recieve reminders to study before your exams. This note taking application would utilize Google Firebase for authorization and it's realtime databse to store users notes on the cloud.
+        </p>
+      </div>
+      <div class="image-grid">
+        <figure style="grid-column: 1; grid-row: 1; width: auto;">
+          <img src="Images\NoteTaker_Login.PNG" alt="Note Taker Login Screen" style="grid-column: 1; grid-row: 1/1; width: auto;">
+          <figcaption>The Login Screen</figcaption>
+        </figure>
+        <p>
+          First, the user would need to either create an account or login. Once an account is created, their credentials are stored on Google Firebase and used for authorizing a login.
+        </p>
+        <figure style="grid-column: 2; grid-row: 1; width: auto;">
+          <img src="Images\NoteTaker_Main.PNG" alt="Note Taker Main Screen" style="grid-column: 1; grid-row: 1/1; width: auto;">
+          <figcaption>The Main Screen</figcaption>
+        </figure>
+        <p>
+          On the main screen, there are several options such as creating a new note (the next image), summarizing your ntoes with a ChatGPT API call, drawing your note if you're using a touchscreen
+          setting a reminder to study, and uploading notes from your system. I was primarily invovled with the ChatGPT API integration but was involved throughout the project.
+        </p>
+        <figure style="grid-column: 3; grid-row: 1; width: auto;">
+          <img src="Images\NoteTaker_New_Note.PNG" alt="Note Taker New Note Screen" style="grid-column: 1; grid-row: 1/1; width: auto;">
+          <figcaption>The New Note Screen</figcaption>
+        </figure>
+        <p>
+          On the new note screen, you would input a title, the date was automatically filled in, and then you would write your note. Once you were done, you would press save and it would automatically
+          attempt to store your note on the cloud. In the event of a failure, you would get a notification and it would be saved locally for you to upload later.
+        </p>
       </div>
     </div>
     
