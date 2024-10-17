@@ -54,7 +54,9 @@ body, html {
   .tabcontent {
     color: black;
     height: 100%;
-    width: 100%;
+    padding-top: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
 .grid-container {
@@ -64,9 +66,6 @@ body, html {
   .top {
     grid-row: 1;
     grid-column: 1 / span 2;
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-left: 5px;
   }
 
   .split {
@@ -109,10 +108,10 @@ body, html {
 
 .image-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  grid-template-rows: 1fr auto;
 }
-  
+
 #COE {background-color: #FCF5E5;}
 #NoteTaker {background-color: #FCF5E5;}
 #Derelict {background-color: #FCF5E5;}
